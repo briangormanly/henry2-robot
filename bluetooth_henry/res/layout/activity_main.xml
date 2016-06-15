@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:textSize="20sp" />
+	<TextView
+        android:id="@+id/txtFrontRange"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeading"
+        android:textSize="20sp" />
+	<TextView
+        android:id="@+id/txtLeftSpeed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFrontRange"
+        android:textSize="20sp" />
+	<TextView
+        android:id="@+id/txtRightSpeed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLeftSpeed"
+        android:textSize="20sp" />
+	<TextView
+        android:id="@+id/txtDistances"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRightSpeed"
+        android:textSize="16sp" />
+	<TextView
+        android:id="@+id/txtMagnitudes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDistances"
+        android:textSize="16sp" />
+	<TextView
+        android:id="@+id/txtTurretIndex"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtMagnitudes"
+        android:textSize="20sp" />
+	
+	<LinearLayout android:orientation="horizontal"
+	    		android:id="@+id/txtTurrentHeading"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/txtTurretIndex" >
+	<TextView
+        android:id="@+id/txtTurretCurrentHeading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp" />
+	<TextView
+        android:id="@+id/txtTurretCurrentSlope"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp" />
+	<TextView
+        android:id="@+id/txtRobotSlope"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp" />
+	</LinearLayout>
+	
+	<LinearLayout android:orientation="horizontal"
+	    		android:id="@+id/coords"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/txtTurrentHeading" >
+		<TextView
+		    android:id="@+id/txtX"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:textSize="20sp" />
+	
+		<TextView
+	        android:id="@+id/txtY"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="20sp" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+	    		android:id="@+id/targets"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/coords" >
+		<TextView
+	        android:id="@+id/txtTargetX"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="20sp" />
+		<TextView
+	        android:id="@+id/txtTargetY"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="20sp" />
+	</LinearLayout>
+	<TextView
+        android:id="@+id/txtCurrentState"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/targets"
+        android:textSize="20sp" />
+	
+	<LinearLayout android:orientation="horizontal"
+	    		android:id="@+id/topButtons"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_above="@+id/bottomButtons">
+		<Button 
+		    android:id="@+id/btnTraveling"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Travel"
+	        android:layout_weight="1"
+		    android:textSize="18sp" />
+		<Button 
+		    android:id="@+id/btnSonar"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Sonar"
+	        android:layout_weight="1"
+		    android:textSize="18sp" />
+		<Button 
+		    android:id="@+id/btnMap"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Map"
+	        android:layout_weight="1"
+		    android:textSize="18sp" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+	    		android:id="@id/bottomButtons"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentBottom="true">
+		<Button 
+		    android:id="@+id/btnRoaming"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Roam"
+	        android:layout_weight="1"
+		    android:textSize="20sp" />
+		<Button 
+		    android:id="@+id/btnWaiting"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Wait"
+	        android:layout_weight="1"
+	        
+		    android:textSize="20sp" />
+	</LinearLayout>
+</RelativeLayout>
